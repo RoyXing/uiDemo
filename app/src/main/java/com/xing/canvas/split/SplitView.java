@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
@@ -68,9 +69,20 @@ public class SplitView extends View {
         mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-
+                updateBall();
+                invalidate();
             }
         });
+    }
+
+    private void updateBall() {
+        for (Ball ball : mBalls) {
+            ball.x += ball.vX;
+            ball.y += ball.vY;
+
+            ball.vX += ball.aX;
+            ball.vY += ball.aY;
+        }
     }
 
     private int rangInt(int i, int j) {
@@ -83,6 +95,20 @@ public class SplitView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.translate(getWidth() >> 1, getHeight() >> 1);
+        canvas.translate(500, 500);
+        for (Ball ball : mBalls) {
+            mPaint.setColor(ball.color);
+            canvas.drawCircle(ball.x, ball.y, ball.r, mPaint);
+        }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            //执行动画
+            mAnimator.start();
+        }
+        return super.onTouchEvent(event);
     }
 }
