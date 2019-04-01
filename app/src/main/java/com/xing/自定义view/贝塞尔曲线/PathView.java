@@ -1,4 +1,4 @@
-package com.xing.贝塞尔曲线;
+package com.xing.自定义view.贝塞尔曲线;
 
 import android.content.Context;
 import android.graphics.Canvas;

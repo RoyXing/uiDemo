@@ -1,4 +1,4 @@
-package com.xing.xfermode滤镜;
+package com.xing.自定义view.xfermode滤镜;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

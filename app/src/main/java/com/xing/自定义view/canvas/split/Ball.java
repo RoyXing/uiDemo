@@ -1,4 +1,4 @@
-package com.xing.canvas.split;
+package com.xing.自定义view.canvas.split;
 
 /**
  * @author roy.xing

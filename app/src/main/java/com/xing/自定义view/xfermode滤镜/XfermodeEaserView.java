@@ -1,4 +1,4 @@
-package com.xing.xfermode滤镜;
+package com.xing.自定义view.xfermode滤镜;
 
 import android.content.Context;
 import android.graphics.Bitmap;

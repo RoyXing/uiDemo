@@ -1,4 +1,4 @@
-package com.xing.canvas.demo;
+package com.xing.自定义view.canvas.demo;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

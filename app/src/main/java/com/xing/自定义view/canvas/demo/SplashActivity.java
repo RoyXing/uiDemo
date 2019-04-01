@@ -1,4 +1,4 @@
-package com.xing.canvas.demo;
+package com.xing.自定义view.canvas.demo;
 
 import android.app.Activity;
 import android.os.Bundle;

@@ -6,11 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.xing.贝塞尔曲线.DragBubbleView
+    <com.xing.屏幕适配.PercentRelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:bubble_radius="30px"
-        app:bubble_text="20"
-        app:bubble_textSize="30px" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="aaaa"
+            app:percent_height="0.5"
+            app:percent_width="0.5" />
+
+    </com.xing.屏幕适配.PercentRelativeLayout>
+
+    <!--<com.xing.自定义view.贝塞尔曲线.DragBubbleView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:bubble_radius="30px"-->
+    <!--app:bubble_text="20"-->
+    <!--app:bubble_textSize="30px" />-->
 
 </android.support.constraint.ConstraintLayout>
